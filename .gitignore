@@ -1,0 +1,44 @@
+# Editor Files #
+################
+*~
+*.swap
+*.swp
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.rpm
+
+# Logs #
+########
+*.log
+*.sql
+*.sqlite
+
+# OS-generated Files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.vagrant
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
