@@ -44,4 +44,4 @@ Thumbs.db
 # Vagrant-generated Files #
 ###########################
 .vagrant
-Vagrantfile
+#Vagrantfile
