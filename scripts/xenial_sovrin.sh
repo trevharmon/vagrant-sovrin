@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 INSTALLDIR='/tmp'
 BASHRC='/etc/bash.bashrc'

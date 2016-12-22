@@ -1,12 +1,17 @@
-#!/bin/sh
+#!/bin/bash
 
+BASHRC='/home/vagrant/.bashrc'
 INSTALLDIR='/tmp'
-BASHRC='/etc/bash.bashrc'
 
 #--------------------------------------------------------
 echo 'Setting Up Virtual Environment'
 pip install --upgrade pip
-pip3 install --upgrade pip # Kludge pip to point to `python3`
+( cd /home/vagrant && pip install virtualenvwrapper )
+echo ''                                           >> $BASHRC
+echo '# Python virtual environment wrapper'       >> $BASHRC
+echo 'export WORKON_HOME=$HOME/.virtualenvs'      >> $BASHRC
+echo 'source /usr/local/bin/virtualenvwrapper.sh' >> $BASHRC
+source $BASHRC
 
 #--------------------------------------------------------
 echo 'Setting Up Anonymous Credentials'
@@ -17,7 +22,13 @@ $INSTALLDIR/anoncreds/setup-charm.sh
 
 #--------------------------------------------------------
 echo 'Setting Up Sovrin'
-pip install sovrin
+sudo -u vagrant bash <<"EOS"
+whoami && \
+  cd /home/vagrant                   && \
+  mkvirtualenv -p python3.5 sovrin   && \
+  workon sovrin                      && \
+  pip install sovrin
+EOS
 
 #--------------------------------------------------------
 echo 'Cleaning Up'
