@@ -22,10 +22,10 @@ Vagrant.configure("2") do |config|
       vb.cpus   = "1"
     end
     centos7.vm.provision "packages", type: "shell", path: "scripts/centos7_packages.sh"
-    centos7.vm.provision "sovrin", type: "shell", path: "scripts/centos7_sovrin.sh"
+    centos7.vm.provision "sovrin",   type: "shell", path: "scripts/centos7_sovrin.sh"
 #    centos7.trigger.after :up do
 #      run "vagrant vbguest --auto-reboot --no-provision"
-      centos7.vm.synced_folder ".","/vagrant", type: "virtualbox"
+#      centos7.vm.synced_folder ".","/vagrant", type: "virtualbox"
 #    end
   end
 
@@ -45,7 +45,7 @@ Vagrant.configure("2") do |config|
       vb.cpus   = "1"
     end
     xenial.vm.provision "packages", type: "shell", path: "scripts/xenial_packages.sh"
-    xenial.vm.provision "sovrin", type: "shell", path: "scripts/xenial_sovrin.sh"
+    xenial.vm.provision "sovrin",   type: "shell", path: "scripts/xenial_sovrin.sh"
   end
 
 end
