@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "precise" do |precise|
-    precise.vm.box       = "boxcutter/ubuntu1604"
+    precise.vm.box       = "hashicorp/precise64"
     precise.vm.host_name = "precise.sovrin.lab"
     precise.vm.network "public_network"
     precise.ssh.private_key_path = "~/.vagrant.d/insecure_private_key"
@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "trusty" do |trusty|
-    trusty.vm.box       = "boxcutter/ubuntu1604"
+    trusty.vm.box       = "ubuntu/trusty64"
     trusty.vm.host_name = "trusty.sovrin.lab"
     trusty.vm.network "public_network"
     trusty.ssh.private_key_path = "~/.vagrant.d/insecure_private_key"
