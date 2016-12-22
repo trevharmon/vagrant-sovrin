@@ -43,6 +43,7 @@ Vagrant.configure("2") do |config|
       vb.gui    = false
       vb.memory = "1024"
       vb.cpus   = "1"
+      vb.customize ["modifyvm", :id, "--cableconnected1", "on"]
     end
     xenial.vm.provision "packages", type: "shell", path: "scripts/xenial_packages.sh"
     xenial.vm.provision "sovrin",   type: "shell", path: "scripts/xenial_sovrin.sh"
