@@ -13,6 +13,9 @@ echo 'source /opt/rh/rh-python35/enable' >> /etc/bashrc
 perl -p -i -e 's|^(Defaults\s+secure_path.+)|$1:/opt/rh/rh-python35/root/usr/bin|' /etc/sudoers
 pip install --upgrade pip
 wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+
+#--------------------------------------------------------
+echo 'Setting Up the Virtual Environment'
 sudo -u vagrant -H pip install virtualenvwrapper
 pip install virtualenvwrapper
 echo ''                                      >> /etc/bashrc
