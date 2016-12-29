@@ -26,7 +26,7 @@ echo 'source /usr/local/bin/virtualenvwrapper.sh' >> /etc/bash.bashrc
 echo 'Setting Up Sovrin'
 su - vagrant ". /etc/bash.bashrc && mkvirtualenv -p python3.5 sovrin"
 su - vagrant ". /etc/bash.bashrc && workon sovrin"
-su - vagrant ". /etc/bash.bashrc && pip install sovrin"
+su - vagrant ". /etc/bash.bashrc && pip install sovrin-dev"
 
 #--------------------------------------------------------
 echo 'Cleaning Up'

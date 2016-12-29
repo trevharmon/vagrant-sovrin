@@ -16,7 +16,7 @@ $INSTALLDIR/anoncreds/setup-charm.sh
 
 #--------------------------------------------------------
 echo 'Setting Up Sovrin'
-pip install sovrin
+pip install sovrin-dev
 
 #--------------------------------------------------------
 echo 'Cleaning Up'

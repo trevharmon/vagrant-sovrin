@@ -23,11 +23,10 @@ $INSTALLDIR/anoncreds/setup-charm.sh
 #--------------------------------------------------------
 echo 'Setting Up Sovrin'
 sudo -u vagrant bash <<"EOS"
-whoami && \
   cd /home/vagrant                   && \
   mkvirtualenv -p python3.5 sovrin   && \
   workon sovrin                      && \
-  pip install sovrin
+  pip install sovrin-dev
 EOS
 
 #--------------------------------------------------------

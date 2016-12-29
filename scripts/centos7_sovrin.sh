@@ -36,7 +36,7 @@ sudo -u vagrant bash <<"EOS"
   source ~/.bashrc
   mkvirtualenv -p python3.5 sovrin
   workon sovrin
-  pip install sovrin
+  pip install sovrin-dev
 EOS
 
 #--------------------------------------------------------
